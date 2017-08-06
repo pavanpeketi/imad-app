@@ -22,11 +22,11 @@ app.get('/articleone', function (req, res) {
 });
 
 app.get('/articletwo', function (req, res) {
-  res.send("Article two requested and will be served here.");
+  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 });
 
 app.get('/articlethree', function (req, res) {
-  res.send("Article three requested and will be served here.");
+  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
 });
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
